@@ -24,7 +24,7 @@ use Cwd;
 my $host=`cat /proc/sys/kernel/hostname`;
 my $gpsval = `cat /home/ran/Desktop/GPS/GPSLOG.csv`;
 
-print BOLD GREEN,"Jamura Device ID:",RESET;print "$host\n";
+print BOLD GREEN,"Jamura Device ID:",RESET;print "$host";
 print BOLD GREEN,"Coordinates     :",RESET;print "$gpsval\n";
 print BOLD GREEN,"Site ID         :",RESET;my $site = <STDIN>;
 print BOLD GREEN,"GDC Support	  :",RESET;my $gid = <STDIN>;
