@@ -20,16 +20,9 @@ print BOLD YELLOW," ##::: ##: ##.... ##: ##:.:: ##: ##:::: ##: ##::. ##:: ##....
 print BOLD YELLOW,". ######:: ##:::: ##: ##:::: ##:. #######:: ##:::. ##: ##:::: ##:\n";
 print BOLD YELLOW,":......:::..:::::..::..:::::..:::.......:::..:::::..::..:::::..::\n",RESET;
 
-my $gps = '/home/ran/Destop/GPS/GPSLOG.csv';
-
-open(gfile, '<<$gps' or die "Cannot open file:$!\n;
-
-while(<$gfile>) {
-     my $gpsval = $_;
-}
-
 use Cwd;
 my $host=`cat /proc/sys/kernel/hostname`;
+my $gpsval = `cat /home/ran/Destop/GPS/GPSLOG.csv`;
 
 print BOLD GREEN,"Jamura Device ID:",RESET;print "$host";
 print BOLD GREEN,"Coordinates     :",RESET;print "$gpsval";
@@ -39,7 +32,7 @@ print BOLD GREEN,"Field User Email:",RESET;my $tce = <STDIN>;
 print BOLD GREEN,"Field User Cell :",RESET;my $tc = <STDIN>;
 print BOLD GREEN,"C & I Date	  :",RESET;my $dte = <STDIN>;
 chomp $host;
-chomp $gpsc;
+chomp $gpsval;
 chomp $site;
 chomp $gid;
 chomp $tce;
