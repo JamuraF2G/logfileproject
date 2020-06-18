@@ -32,7 +32,7 @@ use Cwd;
 my $host=`cat /proc/sys/kernel/hostname`;
 
 print BOLD GREEN,"Jamura Device ID:",RESET;print "$host";
-print BOLD GREEN,"Coordinates     :",RESET;my $gpsc = $gpsval;
+print BOLD GREEN,"Coordinates     :",RESET;print "$gpsval";
 print BOLD GREEN,"Site ID         :",RESET;my $site = <STDIN>;
 print BOLD GREEN,"GDC Support	  :",RESET;my $gid = <STDIN>;
 print BOLD GREEN,"Field User Email:",RESET;my $tce = <STDIN>;
