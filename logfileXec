@@ -20,18 +20,26 @@ print BOLD YELLOW," ##::: ##: ##.... ##: ##:.:: ##: ##:::: ##: ##::. ##:: ##....
 print BOLD YELLOW,". ######:: ##:::: ##: ##:::: ##:. #######:: ##:::. ##: ##:::: ##:\n";
 print BOLD YELLOW,":......:::..:::::..::..:::::..:::.......:::..:::::..::..:::::..::\n",RESET;
 
+my $gps = '/home/ran/Destop/GPS/GPSLOG.csv';
 
+open(gfile, '<<$gps' or die "Cannot open file:$!\n;
+
+while(<$gfile>) {
+     my $gpsval = $_;
+}
 
 use Cwd;
 my $host=`cat /proc/sys/kernel/hostname`;
 
 print BOLD GREEN,"Jamura Device ID:",RESET;print "$host";
+print BOLD GREEN,"Coordinates     :",RESET;my $gpsc = $gpsval;
 print BOLD GREEN,"Site ID         :",RESET;my $site = <STDIN>;
 print BOLD GREEN,"GDC Support	  :",RESET;my $gid = <STDIN>;
 print BOLD GREEN,"Field User Email:",RESET;my $tce = <STDIN>;
 print BOLD GREEN,"Field User Cell :",RESET;my $tc = <STDIN>;
 print BOLD GREEN,"C & I Date	  :",RESET;my $dte = <STDIN>;
 chomp $host;
+chomp $gpsc;
 chomp $site;
 chomp $gid;
 chomp $tce;
@@ -41,6 +49,7 @@ chomp $dte;
 
 open( MYFILE, '>>loginInfo.txt' );    #creates file loginInfo.txt
 print MYFILE "Jamura Device ID	:$host\n";
+print MYFILE "Coordinate      	:$gpsc\n";
 print MYFILE "Site ID         	:$site\n";
 print MYFILE "GDC Support Email	:$gid\n";
 print MYFILE "Field User Email	:$tce\n";
