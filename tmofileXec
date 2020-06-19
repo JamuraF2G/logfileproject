@@ -90,8 +90,7 @@ system("$cmd$site.zip >/dev/null");
 #system('sudo git add messages'); 
 
 system('sudo git commit -m "tmobilelog" >/dev/null');
-system('sudo ./gitPush');
-#system('sudo ./gitPush >/dev/null');
+system('sudo ./gitPush >/dev/null');
 #system("x-www-browser https://github.com/JamuraF2G/nokialogs");
 #system('xdg-open https://github.com/JamuraF2G/nokialogs/blob/master/$site.zip');
 system('sudo git rm -r --cached . >/dev/null');
