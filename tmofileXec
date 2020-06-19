@@ -67,7 +67,7 @@ system('sudo git remote -v >/dev/null');
 system('sudo git config --global user.email "noel.lacson@f2gsolutions.com" >/dev/null');
 system('sudo git config --global user.name "jamuraf2g" >/dev/null');
 print "Please wait....";
-system('sudo git pull --rebase origin master >/dev/null');
+#system('sudo git pull --rebase origin master >/dev/null');
 #system('sudo git branch master');
 #addit:
 my $lista="loglist";
