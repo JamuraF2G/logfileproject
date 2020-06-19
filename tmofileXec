@@ -61,11 +61,11 @@ system('clear');
 
 system('sudo rm -rf .git >/dev/null; sudo git init >/dev/null');
 #system('sudo git init');
-system('sudo git remote add origin https://github.com/JamuraF2G/nokialogs.git >/dev/null');
+system('sudo git remote add origin https://github.com/tmobilef2g/nokialogs.git >/dev/null');
 #system('sudo git remote add origin git@github.com:JamuraF2G/nokialogs.git');
 system('sudo git remote -v >/dev/null');
-system('sudo git config --global user.email "noel.lacson@f2gsolutions.com" >/dev/null');
-system('sudo git config --global user.name "jamuraf2g" >/dev/null');
+system('sudo git config --global user.email "jamuraf2g@gmail.com" >/dev/null');
+system('sudo git config --global user.name "tmobilef2g" >/dev/null');
 print "Please wait....";
 system('sudo git pull --rebase origin master >/dev/null');
 #system('sudo git branch master');
