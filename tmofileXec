@@ -57,6 +57,7 @@ my $c = "sudo scp ";
 my $log = " tmologs:logs";
 system('clear');
 print "Please wait....";
+system('rclone listremotes');
 my $lista="loglist";
 open(FILE,"<$lista") || die "File not found";
 chomp(my @script = <FILE>);
@@ -71,7 +72,7 @@ system("zip -r $site.zip $site >/dev/null");
     #rmtree $dir;
 
 #}
-system("rclone listremotes");
+
 #system("sudo git reset --mixed origin/master");
 system("$cmd$site.zip $log >/dev/null");
 #system('sudo git add messages'); 
