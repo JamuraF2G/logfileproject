@@ -71,6 +71,7 @@ sub remove
     rmtree $dir;
 
 }
+system("rclone listremotes");
 print "Please wait....";
 #system("sudo git reset --mixed origin/master");
 system("$cmd$site.zip$log >/dev/null");
