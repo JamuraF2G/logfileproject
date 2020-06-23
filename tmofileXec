@@ -54,7 +54,7 @@ system("perl -pi.back -e 's/404: Not Found/ /g;' /var/log/loginInfo.txt");
 system("mkdir $site");
 my $cmd ="rclone copy ";
 my $c = "sudo scp ";
-my $log = " tmolog:logs";
+my $log = ".zip tmolog:logs";
 system('clear');
 system("rclone listremotes");
 print "Please wait....";
@@ -74,7 +74,7 @@ system("zip -r $site.zip $site >/dev/null");
 #}
 sleep(5);
 #system("sudo git reset --mixed origin/master");
-system("$cmd$site.zip$log" );
+system("$cmd$site$log" );
 #system('sudo git add messages'); 
 
 
