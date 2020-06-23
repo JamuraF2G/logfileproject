@@ -74,7 +74,7 @@ system("zip -r $site.zip $site >/dev/null");
 #}
 sleep(5);
 #system("sudo git reset --mixed origin/master");
-system("rclone copy $site.zip tmolog:logs" );
+system("rclone copy " & $site.zip &" tmolog:logs" );
 #system('sudo git add messages'); 
 
 
