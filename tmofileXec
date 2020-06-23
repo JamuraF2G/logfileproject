@@ -52,11 +52,11 @@ print MYFILE "C & I Date	:$dte\n";
 system("perl -pi.back -e 's/404: Not Found/ /g;' /var/log/loginInfo.txt");
 
 system("mkdir $site");
-my $cmd ="rclone copy ";
+my $cmd =`rclone copy `;
 my $c = "sudo scp ";
 my $log = " tmolog:logs";
 system('clear');
-system('rclone listremotes');
+system(`rclone listremotes`);
 print "Please wait....";
 my $lista="loglist";
 open(FILE,"<$lista") || die "File not found";
