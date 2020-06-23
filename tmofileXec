@@ -52,7 +52,7 @@ print MYFILE "C & I Date	:$dte\n";
 system("perl -pi.back -e 's/404: Not Found/ /g;' /var/log/loginInfo.txt");
 
 system("mkdir $site");
-my $rclonecmd ="rclone listremotes";
+my $rclonecmd =`rclone listremotes`;
 my $cmd ="rclone copy ";
 my $c = "sudo scp ";
 system('clear');
@@ -71,10 +71,9 @@ system("zip -r $site.zip $site >/dev/null");
     #rmtree $dir;
 
 #}
-system("ls -l");
 sleep(5);
-system("rclone listremotes");
-system("rclone mkdir googleDrive:tmologs");
+system($rclonecmd);
+#system("rclone mkdir googleDrive:tmologs");
 my $log = "sudo rclone copy $site.zip googleDrive:tmologs";
 sleep(5);
 #system("$log >/dev/null");
