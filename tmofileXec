@@ -71,10 +71,10 @@ system("zip -r $site.zip $site >/dev/null");
     #rmtree $dir;
 
 #}
-my $log = "sudo rclone copy $site.zip tmolog:logs";
-sleep(5);
 system("rclone listremotes\r");
-#system("rclone mkdir tmolog:logs");
+system("rclone mkdir googleDrive:tmologs");
+my $log = "sudo rclone copy $site.zip googleDrive:tmologs";
+sleep(5);
 system("$log >/dev/null");
 
 print "Completed Thank you...";
