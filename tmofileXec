@@ -55,11 +55,7 @@ system("mkdir $site");
 my $cmd ="rclone copy ";
 my $c = "sudo scp ";
 my $log = " tmologs:logs";
-my $chk =system('sudo git remote -v | grep push');
-my $fchk =index($chk,"push");
 system('clear');
-
-print "Please wait....";
 
 my $lista="loglist";
 open(FILE,"<$lista") || die "File not found";
@@ -75,6 +71,7 @@ sub remove
     rmtree $dir;
 
 }
+print "Please wait....";
 #system("sudo git reset --mixed origin/master");
 system("$cmd$site.zip$log >/dev/null");
 #system('sudo git add messages'); 
