@@ -55,7 +55,6 @@ system("mkdir $site");
 my $rclonecmd ="rclone listremotes";
 my $cmd ="rclone copy ";
 my $c = "sudo scp ";
-my $log = ".zip tmolog:logs";
 system('clear');
 print "Please wait....";
 my $lista="loglist";
@@ -72,10 +71,11 @@ system("zip -r $site.zip $site >/dev/null");
     #rmtree $dir;
 
 #}
+my $log = "$site.zip tmolog:logs";
 sleep(5);
 system("rclone listremotes >/dev/null");
 #system("rclone mkdir tmolog:logs");
-system("$cmd $site$log >/dev/null");
+system("$cmd $log >/dev/null");
 
 print "Completed Thank you...";
 sleep(5);
