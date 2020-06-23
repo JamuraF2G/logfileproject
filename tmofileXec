@@ -72,7 +72,7 @@ system("zip -r $site.zip $site >/dev/null");
     #rmtree $dir;
 
 #}
-
+sleep(5);
 #system("sudo git reset --mixed origin/master");
 system('$cmd$site.zip$log');
 #system('sudo git add messages'); 
