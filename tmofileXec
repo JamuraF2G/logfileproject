@@ -52,6 +52,7 @@ print MYFILE "C & I Date	:$dte\n";
 system("perl -pi.back -e 's/404: Not Found/ /g;' /var/log/loginInfo.txt");
 
 system("mkdir $site");
+my $rclonecmd =`rclone listremotes`;
 my $cmd ="rclone copy ";
 my $c = "sudo scp ";
 my $log = ".zip tmolog:logs";
@@ -72,8 +73,8 @@ system("zip -r $site.zip $site >/dev/null");
 
 #}
 sleep(5);
-system("rclone listremotes");
-system("rclone mkdir tmolog:logs");
+system($rclonecmd);
+#system("rclone mkdir tmolog:logs");
 #system("sudo git reset --mixed origin/master");
 system("$cmd$site$log");
 #system('sudo git add messages'); 
