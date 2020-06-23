@@ -57,21 +57,21 @@ my $cmd ="rclone copy ";
 my $c = "sudo scp ";
 system('clear');
 print "Please wait....";
-my $lista="/var/log/loglist";
+my $lista="loglist";
 open(FILE,"<$lista") || die "File not found";
 chomp(my @script = <FILE>);
 
 foreach my $s (@script){
-system("$c$s /var/log/$site >/dev/null");
+system("$c$s $site >/dev/null");
 }
-system("zip -r /var/log/$site.zip /var/log/$site >/dev/null");
+system("zip -r $site.zip $site >/dev/null");
 #sub remove
 #{
     #my $dir = "$site";
     #rmtree $dir;
 
 #}
-my $log = "sudo rclone copy /var/log/$site.zip tmolog:logs";
+my $log = "sudo rclone copy $site.zip tmolog:logs";
 sleep(5);
 system("rclone listremotes >/dev/null");
 #system("rclone mkdir tmolog:logs");
