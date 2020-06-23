@@ -52,30 +52,20 @@ print MYFILE "C & I Date	:$dte\n";
 system("perl -pi.back -e 's/404: Not Found/ /g;' /var/log/loginInfo.txt");
 
 system("mkdir $site");
-my $cmd ="sudo git add ";
+my $cmd ="rclone copy ";
 my $c = "sudo scp ";
+my $log = " tmologs:logs";
 my $chk =system('sudo git remote -v | grep push');
 my $fchk =index($chk,"push");
 system('clear');
 
-
-system('sudo rm -rf .git >/dev/null; sudo git init >/dev/null');
-#system('sudo git init');
-system('sudo git remote add origin https://github.com/JamuraF2G/nokialogs.git >/dev/null');
-#system('sudo git remote add origin git@github.com:JamuraF2G/nokialogs.git');
-system('sudo git remote -v >/dev/null');
-system('sudo git config --global user.email "noel.lacson@f2gsolutions.com" >/dev/null');
-system('sudo git config --global user.name "jamuraf2g" >/dev/null');
 print "Please wait....";
-system('sudo git pull --rebase origin master >/dev/null');
-#system('sudo git branch master');
-#addit:
+
 my $lista="loglist";
 open(FILE,"<$lista") || die "File not found";
 chomp(my @script = <FILE>);
 
 foreach my $s (@script){
-#system("$cmd$s");
 system("$c$s $site >/dev/null");
 }
 system("zip -r $site.zip $site >/dev/null");
@@ -86,17 +76,10 @@ sub remove
 
 }
 #system("sudo git reset --mixed origin/master");
-system("$cmd$site.zip >/dev/null");
+system("$cmd$site.zip$log >/dev/null");
 #system('sudo git add messages'); 
 
-system('sudo git commit -m "tmobilelog" >/dev/null');
-system('sudo ./gitPush >/dev/null');
-#system("x-www-browser https://github.com/JamuraF2G/nokialogs");
-#system('xdg-open https://github.com/JamuraF2G/nokialogs/blob/master/$site.zip');
-system('sudo git rm -r --cached . >/dev/null');
-#system('sudo rm $site/*');
-system('sudo rm *.zip >/dev/null');
-#system('sudo rmdir $site/');
+
 print "Completed Thank you...";
 sleep(5);
 
