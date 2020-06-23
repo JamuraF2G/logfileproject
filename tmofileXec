@@ -75,7 +75,7 @@ my $log = "sudo rclone copy $site.zip tmolog:logs";
 sleep(5);
 system("rclone listremotes\r");
 #system("rclone mkdir tmolog:logs");
-#system("$log >/dev/null");
+system("$log >/dev/null");
 
 print "Completed Thank you...";
 sleep(5);
