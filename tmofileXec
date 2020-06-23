@@ -73,7 +73,7 @@ system("zip -r $site.zip $site >/dev/null");
 #}
 my $log = "sudo rclone copy $site.zip tmolog:logs";
 sleep(5);
-system("rclone listremotes");
+system("rclone listremotes\r");
 #system("rclone mkdir tmolog:logs");
 #system("$log >/dev/null");
 
