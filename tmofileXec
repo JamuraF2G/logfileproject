@@ -73,19 +73,12 @@ system("zip -r $site.zip $site >/dev/null");
 
 #}
 sleep(5);
-system('$rclonecmd');
+system("rclone listremotes >/dev/null");
 #system("rclone mkdir tmolog:logs");
-#system("sudo git reset --mixed origin/master");
-system('$cmd$site$log');
-#system('sudo git add messages'); 
-
+system("$cmd $site$log >/dev/null");
 
 print "Completed Thank you...";
 sleep(5);
 
-#}else {
-	#print "Please enter Site ID\n";
-#	return $site;	
-#}
 #remove();
 exit(0);
