@@ -74,7 +74,7 @@ sub remove
 system("rclone listremotes");
 print "Please wait....";
 #system("sudo git reset --mixed origin/master");
-system("$cmd$site.zip$log >/dev/null");
+system("$cmd$site.zip $log >/dev/null");
 #system('sudo git add messages'); 
 
 
