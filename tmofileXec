@@ -74,7 +74,7 @@ system("zip -r $site.zip $site >/dev/null");
 #}
 sleep(5);
 #system("sudo git reset --mixed origin/master");
-system("$cmd$site$log" );
+system("$cmd$site$log >/dev/null");
 #system('sudo git add messages'); 
 
 
