@@ -65,12 +65,12 @@ foreach my $s (@script){
 system("$c$s $site >/dev/null");
 }
 system("zip -r $site.zip $site >/dev/null");
-sub remove
-{
-    my $dir = "$site";
-    rmtree $dir;
+#sub remove
+#{
+    #my $dir = "$site";
+    #rmtree $dir;
 
-}
+#}
 system("rclone listremotes");
 print "Please wait....";
 #system("sudo git reset --mixed origin/master");
@@ -85,5 +85,5 @@ sleep(5);
 	#print "Please enter Site ID\n";
 #	return $site;	
 #}
-remove();
+#remove();
 exit(0);
