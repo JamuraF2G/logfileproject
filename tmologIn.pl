@@ -1,7 +1,4 @@
 #!/usr/bin/perl -w
-use Term::ANSIColor qw(:constants);
-use File::Path;
-#$Term::ANSIColor::AUTORESET = 1;
 #
 # Run log file  
 #
@@ -55,7 +52,7 @@ system("mkdir $site");
 my $rclonecmd =system("rclone listremotes");
 my $cmd ="rclone copy ";
 my $c = "sudo scp ";
-system('clear');
+#system('clear');
 print "Please wait....";
 my $lista="loglist";
 open(FILE,"<$lista") || die "File not found";
