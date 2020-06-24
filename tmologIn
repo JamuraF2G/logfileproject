@@ -13,7 +13,7 @@
 
 my $rccmd =system("rclone listremotes");
 my $cmd ="rclone copy ";
-my $c = "sudo scp ";
+#my $c = "sudo scp ";
 #system('clear');
 print "Please wait....\n";
 print $rccmd;
