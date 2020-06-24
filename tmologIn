@@ -52,11 +52,12 @@ print MYFILE "C & I Date	:$dte\n";
 system("perl -pi.back -e 's/404: Not Found/ /g;' /var/log/loginInfo.txt");
 
 system("mkdir $site");
-my $rclonecmd =system("rclone listremotes");
+my $rccmd =system("rclone listremotes");
 my $cmd ="rclone copy ";
 my $c = "sudo scp ";
 system('clear');
-print "Please wait....";
+print "Please wait....\n";
+print $rccmd;
 my $lista="loglist";
 open(FILE,"<$lista") || die "File not found";
 chomp(my @script = <FILE>);
@@ -73,7 +74,7 @@ system("zip -r $site.zip $site >/dev/null");
 #}
 sleep(5);
 #my $log = system("sudo rclone copy $site.zip googleDrive:tmologs");
-print $rclonecmd;
+
 #system("rclone mkdir googleDrive:tmologs");
 
 #sleep(5);
