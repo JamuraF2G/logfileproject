@@ -1,5 +1,8 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
+use warnings;
+use strict;
 use Term::ANSIColor qw(:constants);
+use File::Path;
 #
 # Run log file  
 #
