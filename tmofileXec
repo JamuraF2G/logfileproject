@@ -83,5 +83,5 @@ print "\n";
 print "Completed Thank you...";
 sleep(10);
 
-#remove();
+remove();
 exit(0);
