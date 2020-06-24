@@ -1,6 +1,6 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 use Term::ANSIColor qw(:constants);
-#use File::Path;
+use File::Path;
 
 print BOLD GREEN,"W	 E	L	C	O	M	E	",BOLD BLUE,"T	O",RESET,"\n";
 print BOLD YELLOW,"::::::'##::::'###::::'##::::'##:'##::::'##:'########:::::'###::::\n";
