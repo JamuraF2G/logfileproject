@@ -1,16 +1,6 @@
 #!/usr/bin/perl
-use warnings;
-use strict;
-use Term::ANSIColor qw(:constants);
-use File::Path;
-#
-# Run log file  
-#
-# Usage: NA
-# 
-# Noel Lacson, November 12, 2019
-#                                        
-#
+
+
 print BOLD GREEN,"W	 E	L	C	O	M	E	",BOLD BLUE,"T	O",RESET,"	    \n";
 print BOLD YELLOW,"::::::'##::::'###::::'##::::'##:'##::::'##:'########:::::'###::::\n";
 print BOLD YELLOW,":::::: ##:::'## ##::: ###::'###: ##:::: ##: ##.... ##:::'## ##:::\n";
