@@ -82,7 +82,7 @@ print $log;
 #system("$log >/dev/null");
 
 print "Completed Thank you...";
-sleep(5);
+sleep(10);
 
 #remove();
-#exit(0);
+exit(0);
