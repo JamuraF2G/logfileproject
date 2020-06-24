@@ -1,2 +1,6 @@
+messages
+syslog
+kern.log
+user.log
 loginInfo.txt
-Weavedssh22.log
+
