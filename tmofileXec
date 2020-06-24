@@ -1,8 +1,8 @@
 #!/usr/bin/perl -w
-#use Term::ANSIColor qw(:constants);
+use Term::ANSIColor qw(:constants);
 #use File::Path;
 
-print BOLD GREEN,"W	 E	L	C	O	M	E	",BOLD BLUE,"T	O",RESET,"	    \n";
+print BOLD GREEN,"W	 E	L	C	O	M	E	",BOLD BLUE,"T	O",RESET,"\n";
 print BOLD YELLOW,"::::::'##::::'###::::'##::::'##:'##::::'##:'########:::::'###::::\n";
 print BOLD YELLOW,":::::: ##:::'## ##::: ###::'###: ##:::: ##: ##.... ##:::'## ##:::\n";
 print BOLD YELLOW,":::::: ##::'##:. ##:: ####'####: ##:::: ##: ##:::: ##::'##:. ##::\n";
