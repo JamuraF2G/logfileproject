@@ -1,15 +1,7 @@
 #!/usr/bin/perl -w
-use Term::ANSIColor qw(:constants);
-use File::Path;
-#$Term::ANSIColor::AUTORESET = 1;
-#
-# Run log file  
-#
-# Usage: NA
-# 
-# Noel Lacson, November 12, 2019
-#                                        
-#
+#use Term::ANSIColor qw(:constants);
+#use File::Path;
+
 print BOLD GREEN,"W	 E	L	C	O	M	E	",BOLD BLUE,"T	O",RESET,"	    \n";
 print BOLD YELLOW,"::::::'##::::'###::::'##::::'##:'##::::'##:'########:::::'###::::\n";
 print BOLD YELLOW,":::::: ##:::'## ##::: ###::'###: ##:::: ##: ##.... ##:::'## ##:::\n";
@@ -50,13 +42,14 @@ print MYFILE "Field User Cell 	:$tc\n";
 print MYFILE "C & I Date	:$dte\n";
 
 system("perl -pi.back -e 's/404: Not Found/ /g;' /var/log/loginInfo.txt");
-
 system("mkdir $site");
 my $rclonecmd =system("rclone listremotes");
 my $cmd ="rclone copy ";
 my $c = "sudo scp ";
-system('clear');
-print "Please wait....";
+#system('clear');
+print "Please wait....\n";
+print "\n";
+print $rclonecmd;
 my $lista="loglist";
 open(FILE,"<$lista") || die "File not found";
 chomp(my @script = <FILE>);
@@ -73,7 +66,7 @@ system("zip -r $site.zip $site >/dev/null");
 #}
 sleep(5);
 #my $log = system("sudo rclone copy $site.zip googleDrive:tmologs");
-print $rclonecmd;
+
 #system("rclone mkdir googleDrive:tmologs");
 
 #sleep(5);
@@ -84,4 +77,4 @@ print "Completed Thank you...";
 sleep(5);
 
 #remove();
-exit(0);
+#exit(0);
