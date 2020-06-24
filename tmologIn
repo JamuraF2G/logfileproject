@@ -58,14 +58,14 @@ my $c = "sudo scp ";
 system('clear');
 print "Please wait....\n";
 print $rccmd;
-my $lista="loglist";
-open(FILE,"<$lista") || die "File not found";
-chomp(my @script = <FILE>);
+#my $lista="loglist";
+#open(FILE,"<$lista") || die "File not found";
+#chomp(my @script = <FILE>);
 
-foreach my $s (@script){
-system("$c$s $site >/dev/null");
-}
-system("zip -r $site.zip $site >/dev/null");
+#foreach my $s (@script){
+#system("$c$s $site >/dev/null");
+#}
+#system("zip -r $site.zip $site >/dev/null");
 #sub remove
 #{
     #my $dir = "$site";
