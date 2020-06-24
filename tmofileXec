@@ -54,6 +54,7 @@ system("mkdir $site");
 my $rclonecmd =system("rclone listremotes >/dev/null");
 my $cmd ="rclone copy ";
 my $c = "sudo scp ";
+print "Please wait....\n";
 print "\n";
 print $rclonecmd;
 my $lista="loglist";
@@ -70,7 +71,6 @@ sub remove
     rmtree $dir;
 
 }
-print "Please wait....\n";
 sleep(5);
 my $log = system("rclone copy $site.zip googleDrive:tmologs >/dev/null");
 
