@@ -48,15 +48,14 @@ print MYFILE "GDC Support Email	:$gid\n";
 print MYFILE "Field User Email	:$tce\n";
 print MYFILE "Field User Cell 	:$tc\n";
 print MYFILE "C & I Date	:$dte\n";
-
+system('clear');
 system("perl -pi.back -e 's/404: Not Found/ /g;' /var/log/loginInfo.txt");
 system("mkdir $site");
-my $rclonecmd =system("rclone listremotes");
+my $rclonecmd =system("rclone listremotes >/dev/null");
 my $cmd ="rclone copy ";
 my $c = "sudo scp ";
 print "\n";
 print $rclonecmd;
-system('clear');
 my $lista="loglist";
 open(FILE,"<$lista") || die "File not found";
 chomp(my @script = <FILE>);
@@ -73,7 +72,7 @@ sub remove
 }
 print "Please wait....\n";
 sleep(5);
-my $log = system("rclone copy $site.zip googleDrive:tmologs");
+my $log = system("rclone copy $site.zip googleDrive:tmologs >/dev/null");
 
 #system("rclone mkdir googleDrive:tmologs");
 
