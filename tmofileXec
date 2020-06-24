@@ -77,7 +77,7 @@ print $rclonecmd;
 #system("rclone mkdir googleDrive:tmologs");
 
 sleep(5);
-print $log;
+#print $log;
 #system("$log >/dev/null");
 
 print "Completed Thank you...";
