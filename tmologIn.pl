@@ -72,7 +72,10 @@ system("zip -r $site.zip $site >/dev/null");
 
 #}
 sleep(5);
+my $Cdir = system("rclone mkdir googleDrive:tmologs");
 my $log = system("sudo rclone copy $site.zip googleDrive:tmologs");
+print $Cdir;
+sleep(5);
 print $rclonecmd;
 #system("rclone mkdir googleDrive:tmologs");
 
