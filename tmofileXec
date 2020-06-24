@@ -54,9 +54,9 @@ system("mkdir $site");
 my $rclonecmd =system("rclone listremotes");
 my $cmd ="rclone copy ";
 my $c = "sudo scp ";
-#system('clear');
 print "\n";
 print $rclonecmd;
+system('clear');
 my $lista="loglist";
 open(FILE,"<$lista") || die "File not found";
 chomp(my @script = <FILE>);
@@ -80,7 +80,7 @@ my $log = system("rclone copy $site.zip googleDrive:tmologs");
 sleep(5);
 print $log;
 #system("$log >/dev/null");
-
+print "\n";
 print "Completed Thank you...";
 sleep(10);
 
